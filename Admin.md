@@ -59,10 +59,6 @@ The 6-8th line of the list says:
 ```
 The GPIII group has super access to only the Assembly_Line, Synth_Escape, Triforce_Zeros depots from anywhere. 
 ```
-You can also put all three in one line as:
-
-<img src="Assets/PermissionConfigureAll3.png">
-
 ## Depot
 
 * To create a new Depot, go to the ```Depots``` tab, right click on any of the depot in the list below, and click ```New Depot...```:

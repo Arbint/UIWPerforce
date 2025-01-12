@@ -1,5 +1,21 @@
 # Perforce Server Documentation
 
+### Userful Topics:
+
+- [Making a Workspace](MakingWorkspace.md)
+
+- [P4IGNORE](P4Ignore.md)
+
+- [Issues](Issues.md)
+
+- [Back Up Routine](BackingUpRoutine.md)
+
+- [Adminastrations](Admin.md)
+
+- [For Programmers](ForCoders.md)
+
+# Quick Start For Users
+
 ```Note:```To access our P4 server outside the Labs, you will need [VPN Access](workingFromHome.md).
 
 ```Your User Name:``` Your user name should be the same as the local part of your email, if your email is ```abcde@uiwtx.edu```, your user name is ```abcde```, if you belive you don't have an account, contact your faculty to add one for you.
@@ -49,18 +65,7 @@
 
     <img src="Assets/P4SystemEnv.png">
 
-    The ```P4IGNORE``` is ```VERY IMPORTANT```, it tells perforce what files to not track and sync with the server, for both ```Unity``` and ```Unreal Engine```, there are alot of generated files that are both re-generatable and super elaborate to keep track of and syncronize. 
+    The [P4GNORE](P4Ignore.md) is ```VERY IMPORTANT```, it tells perforce what files to not track and sync with the server, for both ```Unity``` and ```Unreal Engine```, there are alot of generated files that are both re-generatable and super elaborate to keep track of and syncronize. 
 
     If you are a programmer, the .p4ignore servers the same purpose as .gitignore. But they work very differently, .gitignore is for the repos, but the .p4ignore is per client, you have specifically setup the ```P4IGNORE``` system varible on each of the machine you want to use the .p4ignore, it will not funcion if the environment variable is missing.
 
-### Other Topics:
-
-- [Making a Workspace](MakingWorkspace.md)
-
-- [Adminastrations](Admin.md)
-
-- [Issues](Issues.md)
-
-- [Back Up Routine](BackingUpRoutine.md)
-
-- [For Programmers](ForCoders.md)

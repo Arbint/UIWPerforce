@@ -1,7 +1,9 @@
 # CLI Commands 
 
 For coders who are more comfortable to use the terminal, here are some userful comands, you can also check the Perforce Visual Client's log to see what button fires what command.
-    
+
+It's important to setup the [environement variables](SystemVariable.md) before you attemp CLI command.    
+
 # Streams
 
 Streams are similar to branches in Git, but offers more control over how they branch out, sync, and merge. to understand more about stream: [Official Documentation of Streams](https://www.perforce.com/manuals/p4guide/Content/P4Guide/chapter.streams.html)
