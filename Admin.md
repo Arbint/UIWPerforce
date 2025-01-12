@@ -1,131 +1,82 @@
 # Admin the Server
 
-I recommend to Setup the system environment variable and use terminal to configure it:
-
-* [Setup the environment variable](SystemVariable.md)
+Some admin tasks are easier with the [CLI](AdminConsole.md) tools.
 
 ## Users
 
-#### Add User
-open terminal, and type:
-```sh
-p4 user -f [user_name] 
+* To add a User, go to the ```Users & Groups``` tab, and right click on any of the users under the users list, and select ```New User...```
+
+<img src="Assets/MakeANewUser.png">
+
+* Make sure ```User```, ```Authmethod```, ```Email```, ```Password``` and ```Full name``` are all filled:
+
+<img src="Assets/NewUserBasicSettings.png">
+
+* make sure to add a group to the user by Clicking the ```Browser...``` button under the ```Group:``` settings, pick one. For Students, use the Students group.
+
+<img src="Assets/NewUserGrpConfig.png">
+
+* You can also right click on any user and select ```Edit User 'user name'``` to edit them. to edit them, a similar window like the create user window will pop up, alowing you to change their settings like group.
+
+<img src="Assets/EditUser.png">
+
+## Group
+
+Users under the same group share the pemission settings of that group. For example, the ```Faculty``` group contains the faculty users, and have ```Admin``` access to the entire Server, the can also create/delete users and depots. The ```Student``` group only has the ```write``` access of the ```defaultDepot``` depot on the server, they do not have acess to other depots, and they can't create depot or accounts.
+
+* To make a group, right next to the ```users``` list, there is the ```groups``` list. Right click on any of the groups in the list and select ```New Group``` to make a new one.
+
+<img src="Assets/CreateANewGroup.png">
+
+* Under ```Group```, type in the new group name. Click on the ```Browse...``` button to select which users are to be assigned to the new group. And then click on ok to finish the group creation.
+
+<img src="Assets/AddNewGrpSettings.png">
+
+* You can right click on a group and do the edit or delete just like how you can edit and delete a user.
+
+## Permission
+* After a ```Group``` or ```User``` is created, you should set their Permissions, Under the ```Permissions``` tab, the list on the top allows you to view the permissions of each user and group. The table at the bottom allows you configure their permission.
+
+Click on the ```Insert Line``` button <img src="Assets/InsertLineBtn.png"> allows you to add a new Configuration. 
+
+<img src="Assets/PermissionSettings.png">
+
+The settings you can configre are:
+
+|   Settings         |  Description                                                                                    |
+|--------------------|-------------------------------------------------------------------------------------------------|
+| Access Level       | Level of access you want to give the user or group                                              |
+| User/Group         | Do you want to configure the access level for a User or a Group, pick one of the 2              | 
+|Name                | the User or Group name you want to configure access                                             |
+|Host                | List of computers that has access to the server, a * means any machine from any where can access|
+|Foder/File          | What folders(Depots) or files you want grant access to the user or group                        |
+
+For example, the last entry of the image above says:
 ```
-This add a user with the name user_name, the -f means we force add the user without give a password, doing so will allow us to add a user first, and they can setup their password later.
-
-for example:
-```sh
-p4 user -f adam
+The Students group has the write access of the defaultDepot from anywhere(Host = *).
 ```
-
-A text edior will pop up for you to define more details about the user, you can simply save and close the text editor.
-
-#### Remove User:
-```sh
-p4 user -d [user_name] 
+The 6-8th line of the list says:
 ```
-
-#### check existing users
-```sh
-p4 users
+The GPIII group has super access to only the Assembly_Line, Synth_Escape, Triforce_Zeros depots from anywhere. 
 ```
+You can also put all three in one line as:
 
-#### Set a user as super user
-* open the protect file:
-```sh
-p4d protect
-```
-* add the user as super user by adding this line to the end of the file:
-```sh
-super user [user_name] * //...
-```
-* save and close the file
+<img src="Assets/PermissionConfigureAll3.png">
 
-* check if user is super:
-```sh
-p4 protects -u [user_name]
-```
-## Depot (Project/Repository)
-A depot is a project in Perforce, it is the top-level container for all assets and source code related to a specific project. It is the same as a git repository.
+## Depot
 
-### Check Existing Depots
-```sh
-p4 depots
-```
-### Remove a Depot:
-```sh
-p4 depot -d [depot_name]
-```
+* To create a new Depot, go to the ```Depots``` tab, right click on any of the depot in the list below, and click ```New Depot...```:
 
-### Create a Depot:
-to create depot:
-```sh
-p4 depot -t stream [depot_name] 
-```
-This will create a new stream depot with the name specified by [deportName], and the type of depot is ```stream```.
+<img src="Assets/CreateNewDepot.png">
 
-if you prefer the legacy depot, use:
-```sh
-p4 depot -t local [depot_name]
-```
-the editor defined in the P4EDITOR environment variable will be used to edit the depot configuration file, so it is reommended to set the P4EDITOR to a more coder friendly editor like ```vscode```, etc.
+* Type in the depot name for the new depot in the pop up window and click on ```OK```:
 
-the only thing to set is the Map field, this is the relative path the depot will be place under the server root directory. Usually as: 
-```
-Map: [depot_name]/...
-```
-In situations where mutiple depot needs to be organized in a folder hierachy, we can specify a subfolder as the depot name, for example:
-```
-Map: [depot_category_name]/[depot_name]/... 
-```
-the ```...``` is a wildcard character that matches all characters in the path. Means all files and subfolders are all be placed in here.
+<img src="Assets/DepotName.png">
 
-### Add Streams to the Depot
+* In the pop up window next, the default depot type now is a stream depot, steams are Perforce's vision of how Git Branches should be. If you are not comfortable using streams, besure to change the type to local. The ```Storage location for versioned files:``` setting by default is your-depot-name/... this setting will create a subfolder called your-depot-name under the root folder of the server. if you want more strture, you can add a nested directory.
+Click ```Apply``` to finish creating the server.
 
-Streams are similar to branches in Git, but offers more control over how they branch out, sync, and merge. to understand more about stream: [Official Documentation of Streams](https://www.perforce.com/manuals/p4guide/Content/P4Guide/chapter.streams.html)
+<img src="Assets/CreateDepotSettings.png">
 
-## Create the Mainline Stream
-A stream typed depot need to have a mainline stream, just like a git repository need at least a master brach, we can add it by:
-```sh
-p4 stream -t [stream_type] -P [parent_stream(optional)] [stream_path]
-```
-this will create a new stream, and the editor defined in the P4EDITOR environment variable will be used to edit the stream configuration file.
+* You can also edit or delete a depot by right clicking on any of the depot in the depots list and pick the corresponding command in the context menu.
 
-an example to add a stream named ```main``` to the depot we just created:
-```sh
-p4 stream -t mainline //[depot_name]/main 
-```
-this will create a new stream named ```main``` under the depot we just created, and the stream type is ```mainline```, the mainline stream is like the master branch in Git, it is the main stream that all changes are synced to. It has no parent stream.
-
-
-## Create the Development Stream
-A development stream is a stream that is branched out(is the child of) from the mainline stream. It is used for development of new features, and once the feature is complete, the development stream can be merged(sync) with the mainline stream.
-
-to create a development stream, we need to specify the parent stream with ```-P``` option:
-```sh
-p4 stream -t development -P //[depot_name]/main //[depot_name]/feature_01
-```
-this will create a new stream named ```feature_01``` under the depot we just created, and the stream type is ```development```, and the parent stream is ```//[depot_name]/main```.
-
-## Create the Sparse Stream
-A spase stream is a lightweight stream that usually used for specific tasks needs to be done for a parent stream. Usually an individual can create a new sparse stream for a quick bug fix or small feature development, if the task grows bigger, the sparse stream can be converted to a no-sparse stream like a development stream.
-
-sparse streams allow you to work with a new stream quickly. If your organization has a "branch per bug" workflow, sparse streams might accelerate productivity.
-
-The two types of sparse streams are:
-* sparsedev
-
-    the purpose of a sparsedev is for a specific tasks of a development stream.
-    A sparsedev stream avoids a lengthy populate operation from the mainline stream, and is well suited for developing a feature involving a relatively small number of files.
-
-
-* sparserel
-
-    the purpose of a sparserel is for a specific tasks of a release stream, good for hot fixes.
-
-
-to make a sparse stream, we need to specify the parent stream with ```-P``` option:
-
-```sh
-p4 stream -t sparsedev -P //[depot_name]/feature_01 //[depot_name]/feature_01_part_01_by_user_01
-```
