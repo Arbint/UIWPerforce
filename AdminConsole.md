@@ -17,7 +17,13 @@ for example:
 p4 user -f adam
 ```
 
-A text edior will pop up for you to define more details about the user, you can simply save and close the text editor.
+A text edior will pop up for you to define more details about the user, you can simply save and close the text editor, or you can adjust their email and user name.
+
+To adjust an existing user, it's the same as adding one:
+```sh
+p4 user -f [user_name]
+```
+
 
 #### Remove User:
 ```sh
@@ -29,21 +35,57 @@ p4 user -d [user_name]
 p4 users
 ```
 
-#### Set a user as super user
+#### Set user permission
 * open the protect file:
 ```sh
 p4d protect
 ```
-* add the user as super user by adding this line to the end of the file:
+* add the user permission by adding a new line under the ```protections``` section.
+The following line add user_name to have super access over everything:
 ```sh
 super user [user_name] * //...
 ```
+The following line add user_name write access over the depotName depot
+```sh
+write user [user_name] * //depotName/...
+```
 * save and close the file
 
-* check if user is super:
+* check user permissions:
 ```sh
 p4 protects -u [user_name]
 ```
+## Groups
+### Add a Group:
+```
+p4 group [group_name]
+
+```
+you can then add users to the group under the ```Users``` section
+you can edit an existing group the with the same command you added the group.
+
+### Set Group Permission 
+
+* Open the p4 protect:
+```sh
+p4d protect
+```
+* Add the group permission under the ```permissions``` section.
+The following line gives group_name ```admin``` access to the entire server
+```sh
+admin group [group_name] * //...
+```
+The following line give group_name ```write``` access to the DepotName depot
+```sh
+write group [group_name] * //DepotName/...
+```
+* save and close the file
+
+* check permission of a group:
+```sh
+p4 protects -g [group_name]
+```
+
 ## Depot (Project/Repository)
 A depot is a project in Perforce, it is the top-level container for all assets and source code related to a specific project. It is the same as a git repository.
 

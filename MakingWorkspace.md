@@ -1,10 +1,10 @@
 # Making the Workspace
 
-A workspace is a local directory(folder) on your computer that syncs with a portion of the files on the p4 server. What portion or portions of the server is synced to your director is defined by the ```View``` or ```Mapping``` of the workspace.
+A workspace is a local directory(folder) on your computer that syncs with a portion of the files on the p4 server. What portion or portions of the server is synced to your directory is defined by the ```View``` or ```Mapping``` of the workspace.
 
 ### Make your Workspace
 
-* In the ```Workspace``` tab, right click on any of the items in the workspace list, and click ```New Workspace```, if the ```Workspace``` tab do not exists, press ```Ctrl + F5``` to open it. you should also be able to find it under the ```Main Menu```->```View```.
+* In the ```Workspace``` tab, right click on any of the items in the workspace list, and click ```New Workspace```, if the ```Workspace``` tab do not exists, press ```Ctrl + 5``` to open it. you should also be able to find it under the ```Main Menu```->```View```.
 
 <img src="Assets/CreateANewWorkspace.png">
 
@@ -12,11 +12,16 @@ A workspace is a local directory(folder) on your computer that syncs with a port
 
 <img src="Assets/WorkspaceSettings.png">
 
-* You will then configure what part of the server are you going to sync in the ```Workspace Mappings``` section, I recommend you set to ```view workspace mapping as text``` and configure it as:
+* You will then configure what part of the server are you going to sync in the ```Workspace Mappings``` section, I recommend you set to ```view workspace mapping as text```:
+
+<img src="Assets/ShowMappingAsText.png">
+
+Configure the text below as:
 
 ```
 //TheDepotYouWantToSyncWith/... //YourWorkSpaceName/
 ```
+
 the first ```//``` means the root directory of the perforce server. the second ```//``` means your local machine. the ```/...``` means every file and subdirectories. The text above then translate as:
 
 Everything under ```TheDepotYouWantToSyncWith``` on the ```Server``` syncs to the folder of ```YourWorkspace``` on your local machine.

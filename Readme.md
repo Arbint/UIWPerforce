@@ -6,6 +6,8 @@
 
 - [P4IGNORE](P4Ignore.md)
 
+- [Perforce Official Tutorial](https://www.youtube.com/watch?v=jIQEjDiSe0g&list=PLH3pq2J85xsPYn71_yzzsZQKvalTW-duE)
+
 - [Issues](Issues.md)
 
 - [Back Up Routine](BackingUpRoutine.md)
@@ -16,7 +18,7 @@
 
 # Quick Start For Users
 
-```Note:```To access our P4 server outside the Labs, you will need [VPN Access](workingFromHome.md).
+```Note:```To access our P4 server outside the Labs, you will need [VPN Access](WorkingFromHome.md).
 
 ```Your User Name:``` Your user name should be the same as the local part of your email, if your email is ```abcde@uiwtx.edu```, your user name is ```abcde```, if you belive you don't have an account, contact your faculty to add one for you.
 
@@ -36,7 +38,7 @@
 <img src="Assets/P4VInstall02.png">
 
 
-* Launch ```P4V```, the Perforce Visual Client if it does not automatically open after the installation. In the ```Server``` setting, make sure it is configured as ```10.40.14.107:1666``` if it is not already, and your ```User Name``` to be your user name. Leave the Workspace Empty. And Click the ```OK``` button.
+* Launch ```P4V```, the Perforce Visual Client if it does not automatically open after the installation. In the ```Server``` setting, make sure it is configured as ```10.40.14.107:1666``` if it is not already, and set the ```User``` to be your user name. Leave the Workspace Empty. And Click the ```OK``` button.
 
 <img src="Assets/P4ConnectionConfig.png">
 
@@ -69,3 +71,6 @@
 
     If you are a programmer, the .p4ignore servers the same purpose as .gitignore. But they work very differently, .gitignore is for the repos, but the .p4ignore is per client, you have specifically setup the ```P4IGNORE``` system varible on each of the machine you want to use the .p4ignore, it will not funcion if the environment variable is missing.
 
+
+* For General Usage of Perforce, Watch this Tutorial:
+[Perforce Official Tutorial](https://www.youtube.com/watch?v=jIQEjDiSe0g&list=PLH3pq2J85xsPYn71_yzzsZQKvalTW-duE)
