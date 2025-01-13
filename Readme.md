@@ -23,7 +23,7 @@
 ```Your User Name:``` Your user name should be the same as the local part of your email, if your email is ```abcde@uiwtx.edu```, your user name is ```abcde```, if you belive you don't have an account, contact your faculty to add one for you.
 
 ### Setup P4 Client
-* Download ```Perforce Visual Client``` from [here](https://help.uiw.edu/support/solutions/articles/17000071028-Install-Cisco-AnyConnect-VPN-for-Windows). Make sure you select ```Windows```(or ```MacOS``` if you are using Mac), and the latest version. And click the ```DOWNLOAD``` button.
+* Download ```Perforce Visual Client``` from [here](https://www.perforce.com/downloads/helix-visual-client-p4v). Make sure you select ```Windows```(or ```MacOS``` if you are using Mac), and the latest version. And click the ```DOWNLOAD``` button.
 
 <img src="Assets/DownloadP4V.png" width=600>
 
