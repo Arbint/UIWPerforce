@@ -1,6 +1,6 @@
 # Setup System Environment Variables
 
-You should setup some of the important environt variables so your system knows what your default configureation is.
+You should setup some of the important environment variables so your system knows what your default configuration is.
 
 1, Press the ```Start``` Button, and search for ```Environment Variable``` find and launch the ```Edit the system envrionment``` option:
 
@@ -15,6 +15,6 @@ You should setup some of the important environt variables so your system knows w
 
 <img src="Assets/P4SystemEnv.png">
 
-The ```P4IGNORE``` is ```VERY IMPORTANT```, it tells perforce what files to not track and sync with the server, for both ```Unity``` and ```Unreal Engine```, there are alot of generated files that are both re-generatable and super elaborate to keep track of and syncronize. 
+The ```P4IGNORE``` is ```VERY IMPORTANT```, it tells perforce what files to not track and sync with the server, for both ```Unity``` and ```Unreal Engine```, there are a lot of generated files that are both re-generatable and super elaborate to keep track of and syncronize. 
 
 If you are a programmer, the .p4ignore servers the same purpose as .gitignore. But they work very differently, .gitignore is for the repos, but the .p4ignore is per client, you have specifically setup the ```P4IGNORE``` system varible on each of the machine you want to use the .p4ignore, it will not funcion if the environment variable is missing.

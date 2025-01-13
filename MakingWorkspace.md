@@ -31,7 +31,7 @@ for example, if you want to work on the depot ```Global_Game_Jam_2025```, you ca
 ```
 //Global_Game_Jam_2025/... //jingtianli_JTBox_3382/
 ```
-The following image is show such config:
+The following image is showing such config:
 
 <img src="Assets/MappingConfigure.png">
 
