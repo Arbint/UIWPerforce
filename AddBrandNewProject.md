@@ -3,9 +3,9 @@
 * Create a new workspace with the following confitureation:
 <img src="Assets/newWorkspaceForNewSubFolderSettings.png">
 
-If you want to add a new subfolder in the Global_Game_Jame_2025 Folder, you map it to your new workspace, with the name of the depot under the workspace name.
+For example, if you want to add a new subfolder in the Global_Game_Jame_2025 Deport, you map it to your new workspace, with the name of the depot under the workspace name.
 
-Also make sure you have ```Automatically get all revisions``` checked off. Click on ok, to creat it, once created, because we are not getting all revisions, your new workspace should all be empty:
+Also make sure you have ```Automatically get all revisions``` checked off. Click on ok to create the workspace, once created, because we are not getting all revisions, your new workspace should all be empty:
 
 <img src="Assets/noRevisionsMeansShouldBeEmpty.png">
 
