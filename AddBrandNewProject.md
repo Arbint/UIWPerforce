@@ -14,7 +14,7 @@ Also make sure you have ```Automatically get all revisions``` checked off. Click
 
 <img src="Assets/findTheWorkspaceRoot.png">
 
-* Create a folder of the name of the depot and all the subfolders you want your new subfolder to be under,  create your new folder under it, and add any single new place holder file to force the server to add the folders(P4 do not accept empty folders), it's easier to to to the ```Depot``` tab and check the folder structure there(the image has a typo in the name, it should be Jam, not Jame):
+* Create a folder of the name of the depot and all the subfolders you want your new subfolder to be under,  create your new folder under it, and add any single new place holder file to force the server to add the folders(P4 do not accept empty folders), it's easier to go to the ```Depot``` tab and check the folder structure there(the image has a typo in the name, it should be Jam, not Jame):
 
 <img src="Assets/createYourNewProjectFolderAndFile.png"> 
 
