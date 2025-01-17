@@ -1,6 +1,6 @@
 # Add your New Project
 
-* Create a new workspace with the following confitureation:
+* Create a new workspace with the following configuration:
 <img src="Assets/newWorkspaceForNewSubFolderSettings.png">
 
 For example, if you want to add a new subfolder in the Global_Game_Jame_2025 Deport, you map it to your new workspace, with the name of the depot under the workspace name.
