@@ -4,6 +4,8 @@
 
 - [Making a Workspace](MakingWorkspace.md)
 
+- [Add New Project Folder](AddBrandNewProject.md)
+
 - [P4IGNORE](P4Ignore.md)
 
 - [Perforce Official Tutorial](https://www.youtube.com/watch?v=jIQEjDiSe0g&list=PLH3pq2J85xsPYn71_yzzsZQKvalTW-duE)
