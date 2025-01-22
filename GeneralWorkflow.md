@@ -30,6 +30,6 @@ Thanks to contribution of Melanie
 
 <img src="Assets/reviewChangelist.png">
 
-7,
+7. Your work should be on the depot by now, but just in case, you can go to the "History" tab and see if your Revision (changes) are there.
 
 <img src="Assets/checkTheHistory.png">
