@@ -8,6 +8,10 @@
 
 - [P4IGNORE](P4Ignore.md)
 
+- [Working From Home](WorkingFromHome.md)
+
+- [General Workflow](GeneralWorkflow.md)
+
 - [Perforce Official Tutorial](https://www.youtube.com/watch?v=jIQEjDiSe0g&list=PLH3pq2J85xsPYn71_yzzsZQKvalTW-duE)
 
 - [Issues](Issues.md)
