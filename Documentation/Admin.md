@@ -76,3 +76,6 @@ Click ```Apply``` to finish creating the server.
 
 * You can also edit or delete a depot by right clicking on any of the depot in the depots list and pick the corresponding command in the context menu.
 
+## Configuring New Server on Linux
+If need to configure new server or move current server onto Linux, here is a [guide](ServerConfiguration.md).
+
