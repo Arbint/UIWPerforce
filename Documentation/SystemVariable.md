@@ -4,7 +4,7 @@ You should setup some of the important environment variables so your system know
 
 1, Press the ```Start``` Button, and search for ```Environment Variable``` find and launch the ```Edit the system envrionment``` option:
 
-<img src="Assets/EditEnvironmentVarIcon.png">
+<img src="../Assets/EditEnvironmentVarIcon.png">
 
 2, In the ```System Properties``` window, click ```Environment Variables...``` and in the pop up window, click the ```New``` Button. and in the new pop up window, set the ```Variable name``` to ```P4PORT``` and ```Variable value``` to ```10.40.14.107:1666```. Click the ```OK``` button to add the variable. Perfore will try to find this environment variable to use as the port (the adress to connect to the server). You should also add the following envrionment variables:
 
@@ -13,7 +13,7 @@ You should setup some of the important environment variables so your system know
 | P4IGNORE       | .p4ignore      |
 | P4USER         | Your User Name |
 
-<img src="Assets/P4SystemEnv.png">
+<img src="../Assets/P4SystemEnv.png">
 
 The ```P4IGNORE``` is ```VERY IMPORTANT```, it tells perforce what files to not track and sync with the server, for both ```Unity``` and ```Unreal Engine```, there are a lot of generated files that are both re-generatable and super elaborate to keep track of and syncronize. 
 

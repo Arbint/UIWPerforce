@@ -6,15 +6,15 @@ A workspace is a local directory(folder) on your computer that syncs with a port
 
 * In the ```Workspace``` tab, right click on any of the items in the workspace list, and click ```New Workspace```, if the ```Workspace``` tab do not exists, press ```Ctrl + 5``` to open it. you should also be able to find it under the ```Main Menu```->```View```.
 
-<img src="Assets/CreateANewWorkspace.png">
+<img src="../Assets/CreateANewWorkspace.png">
 
 * In the pop up window, the ```Workspace name``` is the unique name of your workspace, by default, it is composed with ```username```+```ComputerName```+```RandomUniqueNumber```. You can give it a different name but it needs to be globally unique, and have good infomation like user name and the computer. Be aware that this workspace is recored on the server, and deleting the folder on your local computer will not remove that record. The ```Workspace root``` is the local root directory of the Workspace, it is where you have files synced with the server. Pick a good place you can easily find.
 
-<img src="Assets/WorkspaceSettings.png">
+<img src="../Assets/WorkspaceSettings.png">
 
 * You will then configure what part of the server are you going to sync in the ```Workspace Mappings``` section, I recommend you set to ```view workspace mapping as text```:
 
-<img src="Assets/ShowMappingAsText.png">
+<img src="../Assets/ShowMappingAsText.png">
 
 Configure the text below as:
 
@@ -33,7 +33,7 @@ for example, if you want to work on the depot ```Global_Game_Jam_2025```, you ca
 ```
 The following image is showing such config:
 
-<img src="Assets/MappingConfigure.png">
+<img src="../Assets/MappingConfigure.png">
 
 Say we have 4 projects: A, B, C, D, each is a sub directory in the ```Global_Game_Jam_2025``` depot, and you are only working on Project A and don't care about the others. then your configuration will be:
 
@@ -51,14 +51,14 @@ Notice that we will have to add ```A/...``` and ```B/...``` to your workspace to
 
 And if you are wondering, yes, you can map multiple depots to multiple subfolders to a sinlge workspace, for example, a new dummy empty depot called defaultDepot is created, the configure in the following image maps both depot to the new workspace:
 
-<img src="Assets/MappingConfigureMulti.png">
+<img src="../Assets/MappingConfigureMulti.png">
 
 Or to put it simply, you can map any number of different parts of the server to your workspace.
 
 * After you have configured your mapping (some times refer as view) of your workspace, I also recommend to check on ```Automatically get all revisions``` to get all the files you mapped to your workspace right away. if you do not check it on, your workspace will be empty. Click the ```OK``` button to finish creating your workspace.
 
-<img src="Assets/CreateTheWorkspace.png">
+<img src="../Assets/CreateTheWorkspace.png">
 
 * If you did something wrong or changed your mind, you can right click on the workspace you just created in the workspace list, and click ```View Workspace 'your work space name'```. In the pop up window, you can alter the settings(like the ```View```) of your workspace, and click the ```Edit``` button to make the change.
 
-<img src="Assets/AlterWorkspaceSettings.png">
+<img src="../Assets/AlterWorkspaceSettings.png">

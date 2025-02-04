@@ -2,29 +2,29 @@
 
 ### Userful Topics:
 
-- [Making a Workspace](MakingWorkspace.md)
+- [Making a Workspace](Documentation/MakingWorkspace.md)
 
-- [Add New Project Folder](AddBrandNewProject.md)
+- [Add New Project Folder](Documentation/AddBrandNewProject.md)
 
-- [P4IGNORE](P4Ignore.md)
+- [P4IGNORE](Documentation/P4Ignore.md)
 
-- [Working From Home](WorkingFromHome.md)
+- [Working From Home](Documentation/WorkingFromHome.md)
 
-- [General Workflow](GeneralWorkflow.md)
+- [General Workflow](Documentation/GeneralWorkflow.md)
 
 - [Perforce Official Tutorial](https://www.youtube.com/watch?v=jIQEjDiSe0g&list=PLH3pq2J85xsPYn71_yzzsZQKvalTW-duE)
 
-- [Issues](Issues.md)
+- [Issues](Documentation/Issues.md)
 
-- [Back Up Routine](BackingUpRoutine.md)
+- [Back Up Routine](Documentation/BackingUpRoutine.md)
 
-- [Adminastrations](Admin.md)
+- [Adminastrations](Documentation/Admin.md)
 
-- [For Programmers](ForCoders.md)
+- [For Programmers](Documentation/ForCoders.md)
 
 # Quick Start For Users
 
-```Note:```To access our P4 server outside the Labs, you will need [VPN Access](WorkingFromHome.md).
+```Note:```To access our P4 server outside the Labs, you will need [VPN Access](Documentation/WorkingFromHome.md).
 
 ```Your User Name:``` Your user name should be the same as the local part of your email, if your email is ```abcde@uiwtx.edu```, your user name is ```abcde```, if you belive you don't have an account, contact your faculty to add one for you.
 
@@ -73,7 +73,7 @@
 
     <img src="Assets/P4SystemEnv.png">
 
-    The [P4GINORE](P4Ignore.md) is ```VERY IMPORTANT```, it tells perforce what files to not track and sync with the server, for both ```Unity``` and ```Unreal Engine```, there are a lot of generated files that are both re-generatable and super elaborate to keep track of and syncronize. 
+    The [P4GINORE](Documentation/P4Ignore.md) is ```VERY IMPORTANT```, it tells perforce what files to not track and sync with the server, for both ```Unity``` and ```Unreal Engine```, there are a lot of generated files that are both re-generatable and super elaborate to keep track of and syncronize. 
 
     If you are a programmer, the .p4ignore servers the same purpose as .gitignore. But they work very differently, .gitignore is for the repos, but the .p4ignore is per client, you have specifically setup the ```P4IGNORE``` system varible on each of the machine you want to use the .p4ignore, it will not funcion if the environment variable is missing.
 

@@ -7,8 +7,8 @@ Visual Studio, Unreal and Unity all have a million generated files that are re-g
 
 1, Put the corresponding .p4ignore files at the root folder of the game project.
 
-<a href="vendor/unreal/.p4ignore" download>Unreal</a>
+<a href="../vendor/unreal/.p4ignore" download>Unreal</a>
 
-<a href="vendor/unity/.p4ignore" download>Unity</a>
+<a href="../vendor/unity/.p4ignore" download>Unity</a>
 
 2, Setup the P4IGNORE [Environment Variable](SystemVariable.md) on your machine if you haven't. 

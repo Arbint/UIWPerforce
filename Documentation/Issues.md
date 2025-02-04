@@ -7,7 +7,7 @@ If files are marked for deletion and cannot be access elsewhere. here are some s
 
 * option 1: Hove the cursor on one of the files that are marked for deletion, and the tool tip should show who did it:
 
-<img src="Assets/MarkedForDeletionInTooltip.png">
+<img src="../Assets/MarkedForDeletionInTooltip.png">
 
 The above image shows that it's user ```jingtianli``` that marked it for deletion in workspace ```jingtian_JTBox_1464```
 
@@ -20,7 +20,7 @@ this shows all(-a) files in the //[Depot Name]/[Sub Folder Name] folder that are
 
 for example:        
 
-<img src="Assets/checkFilesMarkForDelete.png">
+<img src="../Assets/checkFilesMarkForDelete.png">
 
 The example in the image aboe shows that user ```jingitanli``` has marked the file ```readme.txt``` for deleteion in the default changelist in the workspace named: ```jingtianli_JTBox_1464```
 
@@ -28,11 +28,11 @@ The example in the image aboe shows that user ```jingitanli``` has marked the fi
 #### 2, Clear the mark for deletion state
 If you do not have Admin access, you will need to ask the user to do it on their end, the user has to go to their workspace, find the changelist, and right click on it, and select ```Revert Files```:
 
-<img src="Assets/RevertChanges.png">
+<img src="../Assets/RevertChanges.png">
 
 And then confirm the revert:
 
-<img src="Assets/confirmRevert.png">
+<img src="../Assets/confirmRevert.png">
 
 If the user do not have the workspace or do not have access to the workspace, the user who is resposible need to use terminal command to do it remotely:
 
@@ -43,7 +43,7 @@ The ```-k``` means we will keep the file changes on that workspace, we are just 
 
 The following image shows an example of using the terminal to clear the delete state of all files in ```2025_ANGD_4440/NeonParadigm/``` that was makred for deletion in the workspace named ```jingtianli_JTBox_1464```:
 
-<img src="Assets/revertChangesThroughTheTerminal.png">
+<img src="../Assets/revertChangesThroughTheTerminal.png">
 
 The output of the command shows that ```readme.txt``` was in delete state, and now that state is cleared.
 

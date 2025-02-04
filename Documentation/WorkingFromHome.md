@@ -6,7 +6,7 @@
 
 * Follow the Instructions to download and run ```Cisco AnyConnect```, before you click on connect, make sure you click on the little gear icon, go the the ```Preferences```, and check on ```Allow local(LAN) access when using VPN(if configured)```
 
-<img src="Assets/CiscoAnyConnectConfig.png">
+<img src="../Assets/CiscoAnyConnectConfig.png">
 
 * the Address should be ```connect.uiwtx.edu```, click on connect, and in the login page, use your UIW credentials to autheticate.
 

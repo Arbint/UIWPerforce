@@ -6,19 +6,19 @@ Some admin tasks are easier with the [CLI](AdminConsole.md) tools.
 
 * To add a User, go to the ```Users & Groups``` tab, and right click on any of the users under the users list, and select ```New User...```
 
-<img src="Assets/MakeANewUser.png">
+<img src="../Assets/MakeANewUser.png">
 
 * Make sure ```User```, ```Authmethod```, ```Email```, ```Password``` and ```Full name``` are all filled:
 
-<img src="Assets/NewUserBasicSettings.png">
+<img src="../Assets/NewUserBasicSettings.png">
 
 * make sure to add a group to the user by Clicking the ```Browser...``` button under the ```Group:``` settings, pick one. For Students, use the Students group.
 
-<img src="Assets/NewUserGrpConfig.png">
+<img src="../Assets/NewUserGrpConfig.png">
 
 * You can also right click on any user and select ```Edit User 'user name'``` to edit them. to edit them, a similar window like the create user window will pop up, alowing you to change their settings like group.
 
-<img src="Assets/EditUser.png">
+<img src="../Assets/EditUser.png">
 
 ## Group
 
@@ -26,20 +26,20 @@ Users under the same group share the pemission settings of that group. For examp
 
 * To make a group, right next to the ```users``` list, there is the ```groups``` list. Right click on any of the groups in the list and select ```New Group``` to make a new one.
 
-<img src="Assets/CreateANewGroup.png">
+<img src="../Assets/CreateANewGroup.png">
 
 * Under ```Group```, type in the new group name. Click on the ```Browse...``` button to select which users are to be assigned to the new group. And then click on ok to finish the group creation.
 
-<img src="Assets/AddNewGrpSettings.png">
+<img src="../Assets/AddNewGrpSettings.png">
 
 * You can right click on a group and do the edit or delete just like how you can edit and delete a user.
 
 ## Permission
 * After a ```Group``` or ```User``` is created, you should set their Permissions, Under the ```Permissions``` tab, the list on the top allows you to view the permissions of each user and group. The table at the bottom allows you configure their permission.
 
-Click on the ```Insert Line``` button <img src="Assets/InsertLineBtn.png"> allows you to add a new Configuration. 
+Click on the ```Insert Line``` button <img src="../Assets/InsertLineBtn.png"> allows you to add a new Configuration. 
 
-<img src="Assets/PermissionSettings.png">
+<img src="../Assets/PermissionSettings.png">
 
 The settings you can configre are:
 
@@ -63,16 +63,16 @@ The GPIII group has super access to only the Assembly_Line, Synth_Escape, Trifor
 
 * To create a new Depot, go to the ```Depots``` tab, right click on any of the depot in the list below, and click ```New Depot...```:
 
-<img src="Assets/CreateNewDepot.png">
+<img src="../Assets/CreateNewDepot.png">
 
 * Type in the depot name for the new depot in the pop up window and click on ```OK```:
 
-<img src="Assets/DepotName.png">
+<img src="../Assets/DepotName.png">
 
 * In the pop up window next, the default depot type now is a stream depot, steams are Perforce's vision of how Git Branches should be. If you are not comfortable using streams, besure to change the type to local. The ```Storage location for versioned files:``` setting by default is your-depot-name/... this setting will create a subfolder called your-depot-name under the root folder of the server. if you want more strture, you can add a nested directory.
 Click ```Apply``` to finish creating the server.
 
-<img src="Assets/CreateDepotSettings.png">
+<img src="../Assets/CreateDepotSettings.png">
 
 * You can also edit or delete a depot by right clicking on any of the depot in the depots list and pick the corresponding command in the context menu.
 
