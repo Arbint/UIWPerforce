@@ -70,3 +70,26 @@ be sure to configure the depot to use the same type. (local, stream, etc) and ha
 
 You can use ```p4 info``` now to test if the server is up and runing.
 
+Without a license, the server will not work properly, especially we over the user limit, which could be the case if the server backed up has more than 5 users.
+
+To test the server without breaking the limit, we can backup the following files:
+```sh
+cp db.user db.user.bak
+cp db.group db.group.bak
+cp db.protect db.protect.bak
+cp db.domain db.domain.bak
+```
+then remove them
+```sh
+rm db.user db.group db.protect db.domain 
+```
+next, we will ned to upgrade the database:
+```sh
+p4d -r . -xu
+```
+
+then test launch the server again:
+```sh
+p4 -r . -p 1666
+```
+
