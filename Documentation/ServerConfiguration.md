@@ -76,7 +76,7 @@ sudo apt-get install helix-p4d
 * Enter Y to confirm and wait for installation to complete.
 
 
-## To complete Helix Core Server installation, configure the Perforce service.
+## Start a Brand New Server
 
 * Run the configuration in interactive mode:
 
@@ -115,3 +115,62 @@ To learn more about configure-helix-p4d.sh script, see Post-installation configu
 
 * Here is an example:
 <img src="../Assets/configSumary.png">
+
+
+## Start From a Backed Up Server
+
+The server is backup with the following steps, follow it to test launch the server:
+[Server Backup Routine](../Documentation/ServerBackupRoutine.md)
+
+Stop the server, and we then make a service mannually:
+
+* Create a ```systemd``` service file:
+```sh
+sudo vim /etc/systemd/system/perforce.service
+```
+Add the following to the file:
+```
+[Unit]
+Description=Perforce Helix Core Server
+After=network.target
+
+[Service]
+Type=forking
+User=perforce
+Group=perforce
+ExecStart=/usr/bin/p4d -r /opt/perforce -J journal -L logs -p 1666 -d
+ExecStop=/usr/bin/p4 admin stop
+Restart=always
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
+```
+here are the settings and their meaning:
+| Setting	|  Purpose    |
+|-----------|-------------|
+|Description|	Provides a human-readable description.|
+After=network.target|	Ensures Perforce starts after the network is available.|
+Type=forking|Runs as a background daemon.|
+User=perforce|	Runs as a non-root user for security.|
+ExecStart|	Specifies how to start the server.|
+ExecStop | Specifies how to stop the server.|
+Restart=always|	Ensures the service restarts if it crashes.|
+LimitNOFILE=4096|Increases file descriptor limits.|
+WantedBy=multi-user.target|	Ensures Perforce starts at boot.|
+
+Save the file, and then reaload the system control daemon:
+```sh
+sudo systemctl daemon-reload
+```
+enable the service:
+```sh
+sudo systemctl enable perforce
+```
+now start the server as an service:
+```sh
+sudo systemctl start perforce
+```
+
+
+

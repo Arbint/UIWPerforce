@@ -35,6 +35,16 @@ p4d -r . -jr ./checkpoint.3
 ```
 This will rebuild the ```db*``` files needed for the server to know the history and files.
 
+If this error appear:
+```
+case handling mismatch: server uses Unix-style (-C0) but journal flags are Windows-style(-C1)!
+```
+
+then do:
+```sh
+p4d -r . -jr  -C1 checkpoint.3
+```
+
 * Install the license. move the license file to your perforce server root dir:
 ``` 
 mv /path/to/license /p4root/license
@@ -58,4 +68,5 @@ p4 depot mgd_seniorthesis2024
 ```
 be sure to configure the depot to use the same type. (local, stream, etc) and have the corrent Map (Map: /mgd/mgd_seniorthesis2024/)
 
-The server should be up and running.
+You can use ```p4 info``` now to test if the server is up and runing.
+
