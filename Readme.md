@@ -20,6 +20,8 @@
 
 - [Adminastrations](Documentation/Admin.md)
 
+- [Configure New Server](Documentation/ServerConfiguration.md)
+
 - [For Programmers](Documentation/ForCoders.md)
 
 # Quick Start For Users
