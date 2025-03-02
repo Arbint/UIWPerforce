@@ -70,7 +70,7 @@ be sure to configure the depot to use the same type. (local, stream, etc) and ha
 
 You can use ```p4 info``` now to test if the server is up and runing.
 
-Without a license, the server will not work properly, especially we over the user limit, which could be the case if the server backed up has more than 5 users.
+Without a license, the server will not work properly, especially when over the user limit, which could be the case if the server backed up has more than 5 users.
 
 To test the server without breaking the limit, we can backup the following files:
 ```sh

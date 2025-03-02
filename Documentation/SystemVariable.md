@@ -18,3 +18,21 @@ You should setup some of the important environment variables so your system know
 The ```P4IGNORE``` is ```VERY IMPORTANT```, it tells perforce what files to not track and sync with the server, for both ```Unity``` and ```Unreal Engine```, there are a lot of generated files that are both re-generatable and super elaborate to keep track of and syncronize. 
 
 If you are a programmer, the .p4ignore servers the same purpose as .gitignore. But they work very differently, .gitignore is for the repos, but the .p4ignore is per client, you have specifically setup the ```P4IGNORE``` system varible on each of the machine you want to use the .p4ignore, it will not funcion if the environment variable is missing.
+
+## Setup on Linux Machine
+
+* open ```.bashrc```
+```
+vim ~/.bashrc
+```
+
+* add the following line to the end of ```.bashrc```
+```sh
+export P4ROOT="localhost:1666"
+export P4USER="username"
+export P4IGNORE=".p4ignore"
+```
+save the file, and reload the ```.bashrc```
+```sh
+source ~/.bashrc
+```

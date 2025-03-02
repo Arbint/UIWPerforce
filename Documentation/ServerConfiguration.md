@@ -113,9 +113,10 @@ sudo -u perforce p4dctl start -t p4d p4dmaster <server_name>
 
 To learn more about configure-helix-p4d.sh script, see Post-installation configuration in Helix Core Server Administrator Guide. 
 
-* Here is an example:
-<img src="../Assets/configSumary.png">
-
+* Install the license. move the license file to your perforce server root dir:
+``` 
+mv /path/to/license /p4root/license
+```
 
 ## Start From a Backed Up Server
 
@@ -124,52 +125,75 @@ The server is backup with the following steps, follow it to test launch the serv
 
 Stop the server, and we then make a service mannually:
 
-* Create a ```systemd``` service file:
+* Create a ```systemd``` service file on the user level:
 ```sh
-sudo vim /etc/systemd/system/perforce.service
+mkdir -p ~/.config/systemd/user
 ```
+The -p means it will add the parent diectories if missing, and also ensure it is ok if the directory exists already.
+
+* Create the service file:
+```sh
+vim ~/.config/systemd/user/p4Server.service
+```
+
 Add the following to the file:
-```
+```sh
 [Unit]
-Description=Perforce Helix Core Server
-After=network.target
+Description=Perforce Server
+After=network-online.target
+Wants=network-online.target
 
 [Service]
-Type=forking
-User=perforce
-Group=perforce
-ExecStart=/usr/bin/p4d -r /opt/perforce -J journal -L logs -p 1666 -d
-ExecStop=/usr/bin/p4 admin stop
+Environment="P4PORT=1666"
+Environment="P4USER=username"
+ExecStart=/usr/sbin/p4d -r /media/storage/backups/P4ServerFeb28 -p 1666
+ExecStop=/opt/perforce/bin/p4 admin stop
+KillMode=none
 Restart=always
-LimitNOFILE=4096
+WorkingDirectory=/media/storage/backups/P4ServerFeb28
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
 ```
 here are the settings and their meaning:
 | Setting	|  Purpose    |
 |-----------|-------------|
 |Description|	Provides a human-readable description.|
-After=network.target|	Ensures Perforce starts after the network is available.|
-Type=forking|Runs as a background daemon.|
-User=perforce|	Runs as a non-root user for security.|
+After=network.target|	Ensures Perforce starts after the network service is launced.|
+Wants=network.target|	Ensures Perforce starts when the network serverice is running.|
+Environment="P4PORT=1666"|	All envrionment variable needed for the ```ExecStart``` and ```ExecStop``` needs to be added here|
 ExecStart|	Specifies how to start the server.|
 ExecStop | Specifies how to stop the server.|
 Restart=always|	Ensures the service restarts if it crashes.|
-LimitNOFILE=4096|Increases file descriptor limits.|
-WantedBy=multi-user.target|	Ensures Perforce starts at boot.|
+KillMode=none|	Tells the server to not kill the process automatically, our ExecStop will do it so we can stop the server correctly|
+LimitNOFILE=4096|Increases file descriptor limits(may not be needed).|
+WorkingDirectory="p4ServerRootDir"|Tells the service to use the p4server root as the working directory(may not be needed)|
+WantedBy=default.target|	Ensures Perforce starts at boot.|
 
 Save the file, and then reaload the system control daemon:
 ```sh
-sudo systemctl daemon-reload
+systemctl --user daemon-reload
 ```
 enable the service:
 ```sh
-sudo systemctl enable perforce
+systemctl --user enable perforce
 ```
 now start the server as an service:
 ```sh
-sudo systemctl start perforce
+systemctl --user start perforce
+```
+to check the service status:
+```sh
+systemctl --user status perforce
+```
+* If the server status shows fail, it might be because of the permission, we should change the permission of the executables and directories that's been used by the ```ExecStart``` and ```ExecStop``` to be xrw (executable, read, write). the simpliest way is to change owner:
+```sh
+sudo chown username directory
+```
+
+to stop the server service
+```sh
+systemctl --user stop perforce
 ```
 
 
