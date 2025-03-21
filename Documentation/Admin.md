@@ -69,7 +69,7 @@ The GPIII group has super access to only the Assembly_Line, Synth_Escape, Trifor
 
 <img src="../Assets/DepotName.png">
 
-* In the pop up window next, the default depot type now is a stream depot, steams are Perforce's vision of how Git Branches should be. If you are not comfortable using streams, besure to change the type to local. The ```Storage location for versioned files:``` setting by default is your-depot-name/... this setting will create a subfolder called your-depot-name under the root folder of the server. if you want more strture, you can add a nested directory.
+* In the pop up window next, the default depot type now is a stream depot, steams are Perforce's vision of how Git Branches should be. If you are not comfortable using streams, besure to change the type to local, but the new trend is to use the stream depots. The ```Storage location for versioned files:``` setting by default is your-depot-name/... this setting will create a subfolder called your-depot-name under the root folder of the server. if you want more strture, you can add a nested directory. The ```depth``` setting can be 1, but if hosting multiple projects in one depot, it is recommended to use a value of 2 or more, the more the value is, the more nesting you can have in the depot tree  view, note that it is more of an organization setting than anything else, setting it to 1 would not prevent you from making nested streams of folders, but your depot tree view will be flat.
 Click ```Apply``` to finish creating the server.
 
 <img src="../Assets/CreateDepotSettings.png">
