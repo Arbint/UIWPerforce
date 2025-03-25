@@ -50,18 +50,5 @@ The output of the command shows that ```readme.txt``` was in delete state, and n
 If the user do not exist, or you cannot get a hold of that user, an admin can used the same terminal command to clear the delete state. All ANGD fulltime facult have admin access.
 
 ## Server is Down 
-If the Sever is down for a long time and seems to be in a limbo state, try one of the following
-
-* Log in the server machine, fire up a terminal as administrator, and type 
-```sh
-sc start perforce
-```
-if a log pop up saying server start pending, then the server should be restarted.
-
-
-* Restart the Server Computer
-
-
-* If you cannot access the server machine, ask professor Li to help do it remotely.
-
+If the Sever is down for a long time and seems to be in a limbo state, reach out to professor Li.
 

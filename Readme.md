@@ -12,6 +12,8 @@
 
 - [Working From Home](Documentation/WorkingFromHome.md)
 
+- [Working with Streams](Documentation/streamWorkspaceWorkflow.md)
+
 - [General Workflow](Documentation/GeneralWorkflow.md)
 
 - [Perforce Official Tutorial](https://www.youtube.com/watch?v=jIQEjDiSe0g&list=PLH3pq2J85xsPYn71_yzzsZQKvalTW-duE)
