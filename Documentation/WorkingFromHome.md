@@ -4,6 +4,8 @@
 
 * you will need to download the [Cisco Any Connect](https://help.uiw.edu/support/solutions/articles/17000071028-Install-Cisco-AnyConnect-VPN-for-Windows) in order to connect to the University. 
 
+``` Note: if the link above does not work, just search for UIW Cisco Any Connect on google```
+
 * Follow the Instructions to download and run ```Cisco AnyConnect```, before you click on connect, make sure you click on the little gear icon, go the the ```Preferences```, and check on ```Allow local(LAN) access when using VPN(if configured)```
 
 <img src="../Assets/CiscoAnyConnectConfig.png">
