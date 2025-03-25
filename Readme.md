@@ -2,15 +2,12 @@
 
 ### Userful Topics:
 
-- [Making a Workspace](Documentation/MakingWorkspace.md)
-
 - [Environment Variable](Documentation/SystemVariable.md)
-
-- [Add New Project Folder](Documentation/AddBrandNewProject.md)
 
 - [P4IGNORE](Documentation/P4Ignore.md)
 
-- [Working From Home](Documentation/WorkingFromHome.md)
+- [Making a Workspace](Documentation/MakingWorkspace.md)
+
 
 - [Working with Streams](Documentation/streamWorkspaceWorkflow.md)
 
@@ -20,7 +17,11 @@
 
 - [Issues](Documentation/Issues.md)
 
+- [Add New Project Folder](Documentation/AddBrandNewProject.md)
+
 - [Back Up Routine](Documentation/BackingUpRoutine.md)
+
+- [Working From Home](Documentation/WorkingFromHome.md)
 
 - [Adminastrations](Documentation/Admin.md)
 
