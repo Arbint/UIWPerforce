@@ -4,6 +4,8 @@
 
 - [Making a Workspace](Documentation/MakingWorkspace.md)
 
+- [Environment Variable](Documentation/SystemVariable.md)
+
 - [Add New Project Folder](Documentation/AddBrandNewProject.md)
 
 - [P4IGNORE](Documentation/P4Ignore.md)
@@ -41,7 +43,9 @@
 <img src="Assets/P4VInstall01.png">
 
 
-* In the next page, make sure the ```Server``` Setting is ```10.40.14.107:1666```. And the ```User Name``` is set to be your user name. Click on ```Next```, and then Click on ```Install```
+* In the next page, make sure the ```Server``` Setting is ```10.40.14.25:1666```. And the ```User Name``` is set to be your user name. Click on ```Next```, and then Click on ```Install```
+
+```Note that the image shows the server as 10.40.14.107:1666, that is an old ip address, use 10.40.14.25:1666```
 
 <img src="Assets/P4VInstall02.png">
 

@@ -10,8 +10,11 @@ You should setup some of the important environment variables so your system know
 
 |  Variable Name | Variable Value |
 |----------------|----------------|
+| P4PORT         | 10.40.14.25:1666      |
 | P4IGNORE       | .p4ignore      |
 | P4USER         | Your User Name |
+
+```NOTE, the image shows P4PORT value is 10.40.14.107:1666, that is an old address, use 10.40.14.25:1666 instead```
 
 <img src="../Assets/P4SystemEnv.png">
 
