@@ -22,11 +22,43 @@ The ```P4IGNORE``` is ```VERY IMPORTANT```, it tells perforce what files to not 
 
 If you are a programmer, the .p4ignore servers the same purpose as .gitignore. But they work very differently, .gitignore is for the repos, but the .p4ignore is per client, you have specifically setup the ```P4IGNORE``` system varible on each of the machine you want to use the .p4ignore, it will not funcion if the environment variable is missing.
 
+
+## Setup on Mac 
+
+* fire up a terminal
+
+* open ```.zshrc``` in terminal
+```sh
+vim ~/.zshrc
+```
+Note that you can also use ```vscode``` or any other text editor to edit the file, if using ```vscode``` then do:
+```sh
+code ~/.zshrc
+```
+
+* add the following line to the end of ```.zshrc```
+```sh
+export P4ROOT="localhost:1666"
+export P4USER="username"
+export P4IGNORE=".p4ignore"
+```
+save the file, and reload the ```.zshrc```
+```sh
+source ~/.zshshrc
+```
+
 ## Setup on Linux Machine
 
-* open ```.bashrc```
+* fire up a terminal
+
+* open ```.bashrc``` in terminal
 ```
 vim ~/.bashrc
+```
+
+Note that you can also use ```vscode``` or any other text editor to edit the file, if using ```vscode``` then do:
+```sh
+code ~/.bashrc
 ```
 
 * add the following line to the end of ```.bashrc```
