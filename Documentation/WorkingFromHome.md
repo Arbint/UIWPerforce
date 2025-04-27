@@ -2,9 +2,10 @@
 
 * ```Important:```If you are a student, ask [Professor Li](mailto:jili1@uiwtx.edu) to add you to the VPN access group.
 
-* you will need to download the [Cisco Any Connect](../Assets/anyconnect-win-4.10.05095-core-vpn-webdeploy-k9.zip) in order to connect to the University. 
+* You will need to <a id="raw-url" href="https://raw.githubusercontent.com/arbint/UIWPerforce/master/Assets/anyconnect-win-4.10.05095-core-vpn-webdeploy-k9.zip">Download Cisco Any Connect</a> and install it to connect to our local area network.
 
-* Follow the Instructions to download and run ```Cisco AnyConnect```, before you click on connect, make sure you click on the little gear icon, go the the ```Preferences```, and check on ```Allow local(LAN) access when using VPN(if configured)```
+
+* After installing, before you click on connect, make sure you click on the little gear icon, go the the ```Preferences```, and check on ```Allow local(LAN) access when using VPN(if configured)```
 
 <img src="../Assets/CiscoAnyConnectConfig.png">
 
