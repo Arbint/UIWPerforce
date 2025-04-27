@@ -2,7 +2,7 @@
 
 * ```Important:```If you are a student, ask [Professor Li](mailto:jili1@uiwtx.edu) to add you to the VPN access group.
 
-* you will need to download the [Cisco Any Connect](https://help.uiw.edu/support/solutions/articles/17000071028-Install-Cisco-AnyConnect-VPN-for-Windows) in order to connect to the University. 
+* you will need to download the [Cisco Any Connect](../Assets/anyconnect-win-4.10.05095-core-vpn-webdeploy-k9.msi) in order to connect to the University. 
 
 ``` Note: if the link above does not work, just search for UIW Cisco Any Connect on google```
 
