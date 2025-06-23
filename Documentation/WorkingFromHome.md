@@ -2,7 +2,7 @@
 
 * ```Important:```If you are a student, ask [Professor Li](mailto:jili1@uiwtx.edu) to add you to the VPN access group.
 
-* You will need to <a id="raw-url" href="https://raw.githubusercontent.com/arbint/UIWPerforce/master/Assets/anyconnect-win-4.10.05095-core-vpn-webdeploy-k9.zip">Download Cisco Any Connect</a> and install it to connect to our local area network.
+* You will need to go use [https://help.uiw.edu/support/solutions/articles/17000176208](UIW Fortgate VPN) and install it to connect to our local area network.
 
 
 * After installing, before you click on connect, make sure you click on the little gear icon, go the the ```Preferences```, and check on ```Allow local(LAN) access when using VPN(if configured)```
