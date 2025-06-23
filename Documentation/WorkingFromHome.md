@@ -2,13 +2,6 @@
 
 * ```Important:```If you are a student, ask [Professor Li](mailto:jili1@uiwtx.edu) to add you to the VPN access group.
 
-* You will need to go use [https://help.uiw.edu/support/solutions/articles/17000176208](UIW Fortgate VPN) and install it to connect to our local area network.
+* After being added to the VPN group, follow this link to setup Fortigate VPN: [UIW Fortigate VPN](https://help.uiw.edu/support/solutions/articles/17000176208). ```NOTE: You do not need to reachout to Helpdesk to get VPN access, the first step should already give you access```
 
-
-* After installing, before you click on connect, make sure you click on the little gear icon, go the the ```Preferences```, and check on ```Allow local(LAN) access when using VPN(if configured)```
-
-<img src="../Assets/CiscoAnyConnectConfig.png">
-
-* the Address should be ```connect.uiwtx.edu```, click on connect, and in the login page, use your UIW credentials to autheticate.
-
-* If the connection is successful, then you can access the P4 server.  
+* After connected to Fotigate VPN, you should be able to connect to perforce.
