@@ -34,12 +34,27 @@ And then confirm the revert:
 
 <img src="../Assets/confirmRevert.png">
 
-If the user do not have the workspace or do not have access to the workspace, the user who is resposible need to use terminal command to do it remotely:
+If the user do not have the workspace or do not have access to the workspace, the user who is resposible need to use terminal command to do it remotely through the terminal command:
 
 ```sh
 p4 revert -k -C [Workspace Name] //[Depot Name]/[Sub Folder Name]/...
 ```
 The ```-k``` means we will keep the file changes on that workspace, we are just removing the state, the ```-C``` means we want to specify the client(Workspace) we want to operate on, if not specified, your current workspace will be used.
+
+It is help full to list out all client that marks a file open:
+
+```sh
+p4 opened -a //.../filename
+```
+And after you got a list of clients (workspaces) that opens the file in question, you can use the ```revert``` command against these clients to clear the status.
+
+It is also helpful to check the info of a client: 
+
+```
+p4 client -o clientName
+```
+
+This should show all the settings of a client.
 
 The following image shows an example of using the terminal to clear the delete state of all files in ```2025_ANGD_4440/NeonParadigm/``` that was makred for deletion in the workspace named ```jingtianli_JTBox_1464```:
 
@@ -51,4 +66,3 @@ If the user do not exist, or you cannot get a hold of that user, an admin can us
 
 ## Server is Down 
 If the Sever is down for a long time and seems to be in a limbo state, reach out to professor Li.
-
