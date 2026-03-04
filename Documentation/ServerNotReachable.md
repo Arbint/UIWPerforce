@@ -30,27 +30,19 @@ ip route get the_ip_of_the_machine_that_can't_reach_the_server
 
 if it shows:
 the_ip_of_the_machine_that_can't_reach_the_server dev br-...
-then the ```br``` part really says that your server is trying to reply request from your ip range to the docker bridge, and that is why your machine can't get a response.
+then the ```br-...``` part really says that your server is trying to reply request from your ip range to the docker bridge, and that is why your machine can't get a response.
 
 the fix:
-
-open ```/etc/docker/daemon.json```
-
-and config ```default-address-pools``` to:
-
-```json
-{
-  "default-address-pools": [
-    {
-      "base": "10.200.0.0/16",
-      "size": 24
-    }
-  ]
-}
+```sh
+docker network ls
 ```
 
-and restart docker:
+this lists the docker networks
+
+find the NETWORK ID that has the same id as the one you have in the br-...
+
+and do a:
 
 ```sh
-sudo systemctl restart docker
+docker network rm [NETWORK_ID]
 ```
