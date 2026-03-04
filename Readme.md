@@ -29,6 +29,8 @@
 
 - [For Programmers](Documentation/ForCoders.md)
 
+- [Server not Reachable](Documentation/ServerNotReachable.md)
+
 # Quick Start For Users
 
 ```Note:```To access our P4 server outside the Labs, you will need [VPN Access](Documentation/WorkingFromHome.md).
