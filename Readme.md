@@ -34,7 +34,7 @@
 - [google](https://google.com)
 
 
-  ```C#
+  ```c
   bool myVar = 10;
   ```
 
