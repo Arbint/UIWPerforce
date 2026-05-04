@@ -35,7 +35,7 @@
 
 
   ```C#
-  print bool myVar = 10;
+  bool myVar = 10;
   ```
 
 # Quick Start For Users
