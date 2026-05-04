@@ -33,6 +33,11 @@
 
 - [google](https://google.com)
 
+
+  ```C#
+  print bool myVar = 10;
+  ```
+
 # Quick Start For Users
 
 ```Note:```To access our P4 server outside the Labs, you will need [VPN Access](Documentation/WorkingFromHome.md).
